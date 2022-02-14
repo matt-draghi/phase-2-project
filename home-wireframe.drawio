@@ -1,37 +1,34 @@
 <mxfile host="65bd71144e">
     <diagram id="gVIno2aFdRWyTRkL3LYU" name="Page-1">
-        <mxGraphModel dx="1040" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1870" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Header" style="swimlane;startSize=60;" vertex="1" parent="1">
+                <mxCell id="2" value="Header" style="swimlane;startSize=60;" parent="1" vertex="1">
                     <mxGeometry x="90" y="70" width="670" height="450" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Navbar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
-                    <mxGeometry x="60" y="40" width="430" height="20" as="geometry"/>
+                <mxCell id="3" value="Navbar" style="rounded=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                    <mxGeometry x="120" y="40" width="430" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Search bar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
-                    <mxGeometry x="510" y="40" width="120" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="5" value="Item Pictures" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="2">
+                <mxCell id="5" value="Item Pictures" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="2" vertex="1">
                     <mxGeometry x="130" y="80" width="410" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="2">
+                <mxCell id="6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="2" vertex="1">
                     <mxGeometry x="330" y="270" width="10" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="2">
+                <mxCell id="7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="2" vertex="1">
                     <mxGeometry x="370" y="270" width="10" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="2">
+                <mxCell id="8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="2" vertex="1">
                     <mxGeometry x="290" y="270" width="10" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Cat 1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                <mxCell id="9" value="Cat 1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry x="60" y="310" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="Cat 2" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                <mxCell id="10" value="Cat 2" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry x="275" y="310" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Cat 3" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                <mxCell id="11" value="Cat 3" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry x="500" y="310" width="120" height="80" as="geometry"/>
                 </mxCell>
             </root>
