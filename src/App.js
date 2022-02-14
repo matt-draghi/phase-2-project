@@ -16,7 +16,7 @@ function App() {
     .then(resp=>resp.json())
     .then(data => {
       setItemCategories(data)
-      console.log(data)
+      // console.log(data)
     })
   },[])
 

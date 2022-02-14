@@ -4,11 +4,10 @@
 
 .App-header {
   background-color: #282c34;
-  /* min-height: 100vh; */
+  height:50px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -16,9 +15,21 @@
 .App-header a{
   text-decoration: none;
   color: white;
+  padding: 2px;
+  margin: 25px;;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.ListItem{
+  display: flex;
+  width:100%;
+  height:250px;
+  margin-left: 100px;
+}
+
+.ListItem h3.name{
+  margin-top: 50px;
+}
