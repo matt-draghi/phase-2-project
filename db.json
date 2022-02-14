@@ -1,0 +1,98 @@
+{
+    "strollers":[
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":1
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":2
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":3
+        }
+    ],
+    "diapers":[
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":1
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":2
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":3
+        }
+    ],
+    "formulas":[
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":1
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":2
+        },
+        {
+            "name":"",
+            "brand":"",
+            "price":"",
+            "description":"",
+            "image":"",
+            "reviews": [],
+            "youtube_link":"",
+            "id":3
+        }
+    ]
+}
