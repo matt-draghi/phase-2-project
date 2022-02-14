@@ -9,3 +9,5 @@ function Diapers ({itemCategories}){
 }
 
 export default Diapers
+
+//test comment
