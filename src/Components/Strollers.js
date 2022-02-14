@@ -9,3 +9,5 @@ function Strollers ({itemCategories}){
 }
 
 export default Strollers
+
+// test
