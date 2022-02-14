@@ -5,20 +5,24 @@ import Home from './Components/Home';
 import Strollers from './Components/Strollers';
 import Diapers from './Components/Diapers';
 import Formula from './Components/Formula';
-import {useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 
 function App() {
 
   const [itemCategories, setItemCategories] = useState([])
 
   useEffect(()=>{
-    fetch(`http://localhost:4000/itemCategories`)
+    fetch(`http://localhost:3000/itemCategories`)
     .then(resp=>resp.json())
     .then(data => {
       setItemCategories(data)
       console.log(data)
     })
   },[])
+
+  console.log(itemCategories)
+
+
 
   return (
     <div className="App">
