@@ -1,5 +1,5 @@
-function ItemPage({item}){
-    
+function ItemPage(){
+
     <div>
 
     </div>

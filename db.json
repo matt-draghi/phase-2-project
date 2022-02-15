@@ -6,7 +6,16 @@
                 "price":"1099.99",
                 "description":"The UPPAbaby VISTA V2 Stroller is uniquely designed to adapt as your family grows. luxurious fabrics and full-grain leather details, this premium stroller can transport up to 3 children while strolling like a single. ** Measures: 36 L x 25.7 W x 39.5 **  ** 2-year limited manufacturer's warranty **",
                 "image":"https://cdn11.bigcommerce.com/s-l97wqz3k9m/images/stencil/608x608/products/97690/188402/1-VISTA21_GRY_GREYSON_0320-VIS-US-GRY__36133.1611954618.jpg?c=1",
-                "reviews": [],
+                "reviews": [
+                    {
+                        "Rating": 3,
+                        "Review": "Not too shabby"
+                    },
+                    {
+                        "Rating": 5,
+                        "Review": "Incredible"
+                    }
+                ],
                 "youtube_link":"https://www.youtube.com/watch?v=w5qAZlbOY0A",
                 "id":1
             },
