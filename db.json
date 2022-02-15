@@ -1,5 +1,4 @@
 {
-    
        "strollers":[
             {
                 "name":"VISTA V2",
@@ -32,7 +31,8 @@
                 "id":3
             }
         ],
-         "diapers":[
+
+        "diapers":[
             {
                 "name":"Swaddlers 84-Count Size 0",
                 "brand":"Pampers",
@@ -64,7 +64,7 @@
                 "id":3
             }
         ],
-         "formulas":[
+        "formulas":[
             {
                 "name":"Gentlease® 29.1 oz",
                 "brand":"Enfamil",
@@ -95,7 +95,7 @@
                 "youtube_link":"https://www.youtube.com/watch?v=16g0Wrd46IU",
                 "id":3
             }
-        ] 
-        
-    
+        ]   
 }
+
+
