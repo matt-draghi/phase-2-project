@@ -3,7 +3,7 @@ import StrollersCard from './StrollersCard';
 
 
 function Strollers ({itemCategories}){
-    const stroller = itemCategories.strollers.map(stroller => {
+    const stroller = itemCategories[0]["strollers"].map(stroller => {
         return (
         <StrollersCard stroller={stroller}key ={stroller.id}/>
         )

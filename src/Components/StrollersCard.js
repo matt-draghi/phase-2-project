@@ -14,12 +14,13 @@ function StrollersCard({stroller}) {
 
   function handleReviewInput (event){
     setReviewInput(event.target.value)
-    console.log(reviewInput)
+
   }
 
   function handleSubmit(event){
     event.preventDefault();
   }
+
 
 
 
@@ -37,14 +38,15 @@ function StrollersCard({stroller}) {
         <button onClick={handleDetail}>{showDetail ? "Hide Detail" : "Show Detail"}</button>
         <p>{showDetail ? description : null}</p>
       </div>
-      <div>
+    
         <a href={youtube_link}>Youtube Link</a>
-      </div>
+     
       <div>
         <form onSubmit ={handleSubmit}>
           <label>Reviews</label>
           <input type="text" onChange={handleReviewInput} value={reviewInput}/>
           <button>submit</button>
+     
         </form>
       </div>
     </div>

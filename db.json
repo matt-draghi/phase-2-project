@@ -1,6 +1,6 @@
 {
-    "itemCategories" : {
-        "strollers":[
+    "itemCategories" : [
+       { "strollers":[
             {
                 "name":"VISTA V2",
                 "brand":"UPPAbaby ",
@@ -31,8 +31,9 @@
                 "youtube_link":"https://www.youtube.com/watch?v=04L2hWtFDdY",
                 "id":3
             }
-        ] ,
-        "diapers":[
+        ] 
+        },
+        { "diapers":[
             {
                 "name":"Swaddlers 84-Count Size 0",
                 "brand":"Pampers",
@@ -63,8 +64,9 @@
                 "youtube_link":"https://www.youtube.com/watch?v=FfJVYFt_ctA",
                 "id":3
             }
-        ] ,
-        "formulas":[
+        ] 
+        },
+        { "formulas":[
             {
                 "name":"Gentlease® 29.1 oz",
                 "brand":"Enfamil",
@@ -96,6 +98,8 @@
                 "id":3
             }
         ] 
-        
-    }
+        }
+    ]
 }
+
+
