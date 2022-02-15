@@ -2,6 +2,8 @@ import React from 'react';
 
 function ListItemFormula({item}){
 
+    
+
     const {name, image} = item
 
     return(
