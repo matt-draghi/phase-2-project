@@ -4,16 +4,9 @@ import Home from './Components/Home';
 import Strollers from './Components/Strollers';
 import Diapers from './Components/Diapers';
 import Formula from './Components/Formula';
-import React, {useEffect, useState} from "react"
-import {Route, Switch} from "react-router-dom"
+
 
 function App() {
-
- 
-
-
-
-
 
   return (
     <div className="App">
