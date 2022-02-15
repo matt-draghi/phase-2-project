@@ -12,10 +12,9 @@ function App() {
 
    const [itemType, setItemType] = useState("")
    const [itemsList, setItemsList] = useState([])
-  //  const itemType = "formulas"
+   
 
    useEffect(() => {
-       
        fetch(`http://localhost:4000/${itemType}`)
        .then(resp => resp.json())
        .then(data => {
