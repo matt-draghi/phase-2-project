@@ -9,6 +9,7 @@ function ListItem({diaper}){
                 alt={name}
             />
             <h3 className="name">{name}</h3>
+            <h3>{price}</h3>
         </div>
     )
 }

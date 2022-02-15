@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 
-function StrollersCard({stroller}) {
+function ItemCard({item}) {
 
-  const {name, brand, price, description, image, youtube_link, reviews} = stroller
+  const {name, brand, price, description, image, youtube_link, reviews} = item
 
   const [showDetail, setShowDetail]=useState(false)
   const [reviewInput, setReviewInput] = useState("")
@@ -54,4 +54,4 @@ function StrollersCard({stroller}) {
   )
 }
 
-export default StrollersCard
+export default ItemCard

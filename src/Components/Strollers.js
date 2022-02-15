@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import StrollersCard from './StrollersCard';
+import Filter from './Filter';
+import StrollersCard from './ItemCard';
 
 function Strollers (){
     const [getStrollers, setGetStrollers] = useState([])
+
+    const [search, getSearch] = useState("")
+    const [sortBy, getSortBy] = useState("")
 
     useEffect(()=>{
       fetch(` http://localhost:4000/strollers`)
@@ -12,20 +16,36 @@ function Strollers (){
         console.log(data)
       })
     },[])
+
     
-    const stroller = getStrollers.map(stroller => {
+    const  stollerDisplay = getStrollers
+    .filter((stroller) =>{
         return (
-        <StrollersCard stroller={stroller}key ={stroller.id}/>
+          stroller.name.toLowerCase().includes(search.toLowerCase()) || stroller.brand.toLowerCase().includes(search.toLowerCase()) 
+        )
+    })
+    .sort((itemA, itemB) =>{
+        if(sortBy === "price"){
+            return itemB.price - itemA.price
+        }else{
+            return itemA.name.localeCompare(itemB.name)
+        }
+    })
+
+
+    const stroller = stollerDisplay.map(stroller => {
+        return (
+        <StrollersCard item={stroller}key ={stroller.id}/>
         )
     })
     
     return (
         <div>
-            <div className ="stroller-filter">
-                <select>
-                    <option value="price">price</option>
-                    <option value="name">name</option>
-                </select>
+            <div>
+                <Filter 
+                search = {search}
+                getSearch ={getSearch}
+                getSortBy ={getSortBy}/>
             </div>
             <div>
                 {stroller}
