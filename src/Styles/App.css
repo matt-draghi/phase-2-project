@@ -34,7 +34,7 @@
   margin-top: 50px;
 }
 
-.stroller-box{
+.item-box{
   display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
@@ -47,7 +47,7 @@
   
 }
 
-.stroller-image{
+.item-image{
   width: 250px;
   height: 250px;
   background-size: cover;

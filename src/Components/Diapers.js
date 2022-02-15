@@ -2,21 +2,15 @@ import React, {useState, useEffect} from 'react';
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
-function Diapers (){
-    const [diapers, setDiapers] = useState([])
+
+function Diapers ({setItemType, diapers}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    useEffect(()=>{
-        fetch(`http://localhost:4000/diapers`)
-        .then(resp=>resp.json())
-        .then(data => {
-          setDiapers(data)
-        })
-      },[])
+    setItemType("diapers")
     
-const diapersDisplay = diapers                // created a variable 
+    const diapersDisplay = diapers               
         .filter((diaper) =>{
             return (
                 diaper.name.toLowerCase().includes(search.toLowerCase()) || diaper.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -30,7 +24,6 @@ const diapersDisplay = diapers                // created a variable
             }
         })
 
-
     return (
         <div>
             <div>
@@ -40,10 +33,11 @@ const diapersDisplay = diapers                // created a variable
                 getSortBy ={getSortBy}/>
             </div>
             {diapersDisplay.map((diaper)=>{
+                const uniqueKey = `${diaper.name}${diaper.id}`
                 return(
                     <>
                         <ItemCard 
-                            key={diaper.id}    
+                            key={uniqueKey}    
                             item={diaper}
                         />
                     </>

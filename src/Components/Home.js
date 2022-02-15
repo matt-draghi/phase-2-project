@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Home ({diapers}){
-    console.log("Hello", diapers)
+function Home (){
     return (
         <div>
-            <p></p>
+            <p>tesgt</p>
         </div>
     )
 }
