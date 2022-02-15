@@ -1,24 +1,19 @@
 import './Styles/App.css';
-import {Route, Switch} from "react-router-dom"
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Strollers from './Components/Strollers';
 import Diapers from './Components/Diapers';
 import Formula from './Components/Formula';
-import {useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
+import {Route, Switch} from "react-router-dom"
 
 function App() {
 
-  const [itemCategories, setItemCategories] = useState([])
+ 
 
-  useEffect(()=>{
-    fetch(`http://localhost:4000/itemCategories`)
-    .then(resp=>resp.json())
-    .then(data => {
-      setItemCategories(data)
-      console.log(data)
-    })
-  },[])
+
+
+
 
   return (
     <div className="App">
@@ -27,16 +22,16 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/">
-            <Home itemCategories={itemCategories} />
+            <Home />
         </Route>
         <Route exact path="/strollers">
-            <Strollers itemCategories={itemCategories} />
+            <Strollers  />
         </Route>
         <Route exact path="/diapers">
-           <Diapers itemCategories={itemCategories} />
+           <Diapers />
         </Route>
         <Route exact path="/formula">
-           <Formula itemCategories={itemCategories} />
+           <Formula />
         </Route>
       </Switch>
     </div>
