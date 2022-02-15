@@ -14,11 +14,9 @@ function Diapers (){
     
     return (
         <div>
-            {console.log(diapers)}
             {diapers.map((diaper)=>{
                 return(
                     <>
-                        {console.log(diaper)}
                         <ListItem 
                             key={diaper.id}    
                             diaper={diaper}

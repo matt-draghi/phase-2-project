@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import StrollersCard from './StrollersCard';
 
-
 function Strollers (){
     const [getStrollers, setGetStrollers] = useState([])
 
     useEffect(()=>{
-      fetch(` http://localhost:3000/strollers`)
+      fetch(` http://localhost:4000/strollers`)
       .then(resp=>resp.json())
       .then(data => {
         setGetStrollers(data)
@@ -14,7 +13,6 @@ function Strollers (){
       })
     },[])
     
-
     const stroller = getStrollers.map(stroller => {
         return (
         <StrollersCard stroller={stroller}key ={stroller.id}/>

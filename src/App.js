@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Strollers from './Components/Strollers';
 import Diapers from './Components/Diapers';
 import Formula from './Components/Formula';
+import {Switch, Route} from "react-router-dom"
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
             <Home />
         </Route>
         <Route exact path="/strollers">
-            <Strollers  />
+            <Strollers />
         </Route>
         <Route exact path="/diapers">
            <Diapers />
