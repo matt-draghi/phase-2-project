@@ -3,25 +3,35 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  /* min-height: 100vh; */
+  background-color: rgb(138, 227, 237);
+  height:50px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-header a{
   text-decoration: none;
-  color: white;
+  color: black;
+  padding: 2px;
+  margin: 25px;;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.ListItem{
+  display: flex;
+  width:100%;
+  height:250px;
+  margin-left: 100px;
+}
+
+.ListItem h3.name{
+  margin-top: 50px;
 
 .stroller-box{
   display: inline;
@@ -46,5 +56,4 @@
   position:absolute;
   top:0;
   right:0;
-
 }

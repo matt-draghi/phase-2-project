@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Home ({itemCategories}){
+function Home ({diapers}){
+    console.log("Hello", diapers)
     return (
         <div>
-            <p>Home</p>
+            <p></p>
         </div>
     )
 }

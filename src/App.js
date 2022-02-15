@@ -5,7 +5,6 @@ import Strollers from './Components/Strollers';
 import Diapers from './Components/Diapers';
 import Formula from './Components/Formula';
 
-
 function App() {
 
   return (
