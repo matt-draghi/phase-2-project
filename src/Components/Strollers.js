@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import StrollersCard from './StrollersCard';
 
 
-function Strollers ({itemCategories}){
-    const stroller = itemCategories[0]["strollers"].map(stroller => {
+function Strollers (){
+    const [getStrollers, setGetStrollers] = useState([])
+
+    useEffect(()=>{
+      fetch(` http://localhost:3000/strollers`)
+      .then(resp=>resp.json())
+      .then(data => {
+        setGetStrollers(data)
+        console.log(data)
+      })
+    },[])
+    
+
+    const stroller = getStrollers.map(stroller => {
         return (
         <StrollersCard stroller={stroller}key ={stroller.id}/>
         )
@@ -18,7 +30,7 @@ function Strollers ({itemCategories}){
                 </select>
             </div>
             <div>
-                <p>{stroller}</p>
+                {stroller}
             </div>
             
         </div>

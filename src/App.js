@@ -9,16 +9,7 @@ import {Route, Switch} from "react-router-dom"
 
 function App() {
 
-  const [itemCategories, setItemCategories] = useState([])
-
-  useEffect(()=>{
-    fetch(`http://localhost:3000/itemCategories`)
-    .then(resp=>resp.json())
-    .then(data => {
-      setItemCategories(data)
-      console.log(data)
-    })
-  },[])
+ 
 
 
 
@@ -31,16 +22,16 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/">
-            <Home itemCategories={itemCategories} />
+            <Home />
         </Route>
         <Route exact path="/strollers">
-            <Strollers itemCategories={itemCategories} />
+            <Strollers  />
         </Route>
         <Route exact path="/diapers">
-           <Diapers itemCategories={itemCategories} />
+           <Diapers />
         </Route>
         <Route exact path="/formula">
-           <Formula itemCategories={itemCategories} />
+           <Formula />
         </Route>
       </Switch>
     </div>

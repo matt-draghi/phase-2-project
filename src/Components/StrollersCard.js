@@ -7,6 +7,7 @@ function StrollersCard({stroller}) {
   const [showDetail, setShowDetail]=useState(false)
   const [reviewInput, setReviewInput] = useState("")
   
+  
 
   function handleDetail(){
     setShowDetail((showDetail)=>!showDetail)
@@ -19,9 +20,8 @@ function StrollersCard({stroller}) {
 
   function handleSubmit(event){
     event.preventDefault();
-  }
-
-
+   
+      }
 
 
   return (
@@ -46,6 +46,7 @@ function StrollersCard({stroller}) {
           <label>Reviews</label>
           <input type="text" onChange={handleReviewInput} value={reviewInput}/>
           <button>submit</button>
+     
      
         </form>
       </div>
