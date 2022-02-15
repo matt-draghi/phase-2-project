@@ -20,6 +20,7 @@ function Home (){
         "https://i.kym-cdn.com/entries/icons/original/000/027/475/Screen_Shot_2018-10-25_at_11.02.15_AM.png"
     ]
 
+
     return (
         <div>
                       
@@ -55,7 +56,6 @@ function Home (){
                   {/* <img src={home[2].image} style={{width: "100px"}} /> */}
                 </NavLink>
             </div>
-
         </div>
         
 

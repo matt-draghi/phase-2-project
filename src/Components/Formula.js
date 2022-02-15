@@ -1,26 +1,16 @@
 import React from 'react';
-import ListItemFormula from './ListItemFormula';
 import {useEffect, useState} from "react"
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
-function Formula (){
-
-    const [formulas, setFormulas] = useState([])
+function Formula ({setItemType, formulas}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    useEffect(() => {
-        fetch(`http://localhost:4000/formulas`)
-        .then(resp => resp.json())
-        .then(data => {
-          setFormulas(data)
-          console.log(data)
-        })
-      },[])
+    setItemType("formulas")
 
-      const fomularDisplay = formulas
+    const fomulaDisplay = formulas
       .filter((formula) =>{
         return (
             formula.name.toLowerCase().includes(search.toLowerCase()) || formula.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -34,9 +24,6 @@ function Formula (){
         }
     })
   
-    // console.log(formulas)
-    // formulas.map(item => console.log(item))
-
     return (
         <div>
             <div>
@@ -45,15 +32,14 @@ function Formula (){
                 getSearch ={getSearch}
                 getSortBy ={getSortBy}/>
             </div>
-            {fomularDisplay.map(item => {
+            {fomulaDisplay.map(formula => {
+                const uniqueKey = `${formula.name}${formula.id}`
                 return(
                     <>
-                        {/* {console.log(item)} */}
-                        <ItemCard item={item} key={item.id} />
+                        <ItemCard item={formula} key={uniqueKey}/>
                    </>
                     )
                 })}
-            <p>Formula</p>
         </div>
     )
 }

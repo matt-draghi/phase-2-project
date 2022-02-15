@@ -2,23 +2,15 @@ import React, {useState, useEffect} from 'react';
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
-function Strollers (){
-    const [getStrollers, setGetStrollers] = useState([])
+
+function Strollers ({setItemType, strollers}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    useEffect(()=>{
-      fetch(` http://localhost:4000/strollers`)
-      .then(resp=>resp.json())
-      .then(data => {
-        setGetStrollers(data)
-        console.log(data)
-      })
-    },[])
-
-    
-    const  stollerDisplay = getStrollers
+    setItemType("strollers")
+   
+    const  stollerDisplay = strollers
     .filter((stroller) =>{
         return (
           stroller.name.toLowerCase().includes(search.toLowerCase()) || stroller.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -32,10 +24,10 @@ function Strollers (){
         }
     })
 
-
     const stroller = stollerDisplay.map(stroller => {
+        const uniqueKey = `${stroller.name}${stroller.id}`
         return (
-        <ItemCard item={stroller}key ={stroller.id}/>
+        <ItemCard item={stroller}key ={uniqueKey}/>
         )
     })
     
@@ -57,4 +49,3 @@ function Strollers (){
 
 export default Strollers
 
-// test
