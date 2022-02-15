@@ -8,7 +8,10 @@ function Strollers ({setItemType, strollers}){
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    setItemType("strollers")
+    useEffect(() => {
+        setItemType("strollers")
+    }, [])
+    
    
     const  stollerDisplay = strollers
     .filter((stroller) =>{

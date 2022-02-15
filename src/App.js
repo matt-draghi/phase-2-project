@@ -31,7 +31,7 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/">
-            <Home />
+            <Home setItemType={setItemType} featuredItems={itemsList}/>
         </Route>
         <Route exact path="/strollers">
             <Strollers setItemType={setItemType} strollers={itemsList}/>
