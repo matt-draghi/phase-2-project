@@ -1,14 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import ListItem from './ListItem';
 
-function Diapers ({itemCategories}){
+function Diapers (){
+    const [diapers, setDiapers] = useState([])
 
-    const diapersArray = itemCategories[1]["diapers"]
+    useEffect(()=>{
+        fetch(`http://localhost:4000/diapers`)
+        .then(resp=>resp.json())
+        .then(data => {
+          setDiapers(data)
+        })
+      },[])
     
     return (
         <div>
-            {/* {console.log(diapersArray)} */}
-            {diapersArray.map((diaper)=>{
+            {console.log(diapers)}
+            {diapers.map((diaper)=>{
                 return(
                     <>
                         {console.log(diaper)}

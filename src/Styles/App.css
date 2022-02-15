@@ -3,18 +3,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(138, 227, 237);
   height:50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-header a{
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 2px;
   margin: 25px;;
 }
