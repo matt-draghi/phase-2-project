@@ -2,6 +2,7 @@ import React from 'react';
 import ListItemFormula from './ListItemFormula';
 import {useEffect, useState} from "react"
 import Filter from './Filter';
+import ItemCard from './ItemCard';
 
 function Formula (){
 
@@ -48,7 +49,7 @@ function Formula (){
                 return(
                     <>
                         {/* {console.log(item)} */}
-                        <ListItemFormula item={item} key={item.id} />
+                        <ItemCard item={item} key={item.id} />
                    </>
                     )
                 })}

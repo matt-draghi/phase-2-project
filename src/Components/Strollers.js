@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Filter from './Filter';
-import StrollersCard from './ItemCard';
+import ItemCard from './ItemCard';
 
 function Strollers (){
     const [getStrollers, setGetStrollers] = useState([])
@@ -35,7 +35,7 @@ function Strollers (){
 
     const stroller = stollerDisplay.map(stroller => {
         return (
-        <StrollersCard item={stroller}key ={stroller.id}/>
+        <ItemCard item={stroller}key ={stroller.id}/>
         )
     })
     
