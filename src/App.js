@@ -1,5 +1,4 @@
 import './Styles/App.css';
-import {Route, Switch} from "react-router-dom"
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Strollers from './Components/Strollers';
@@ -18,7 +17,7 @@ function App() {
             <Home />
         </Route>
         <Route exact path="/strollers">
-            <Strollers />
+            <Strollers  />
         </Route>
         <Route exact path="/diapers">
            <Diapers />

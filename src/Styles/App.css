@@ -32,4 +32,28 @@
 
 .ListItem h3.name{
   margin-top: 50px;
+
+.stroller-box{
+  display: inline;
+  background-repeat: no-repeat;
+  background-position: center 90%;
+  float: left;
+  margin: 2%;
+  padding: 1%;
+  outline: #3B0B0B dotted thick;
+  transition: 0.75s;
+  opacity: 1; 
+  
+}
+
+.stroller-image{
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+}
+
+.stroller-filter{
+  position:absolute;
+  top:0;
+  right:0;
 }

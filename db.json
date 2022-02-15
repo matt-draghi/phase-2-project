@@ -30,8 +30,8 @@
                 "youtube_link":"https://www.youtube.com/watch?v=04L2hWtFDdY",
                 "id":3
             }
-        ] 
-        ,
+        ],
+
         "diapers":[
             {
                 "name":"Swaddlers 84-Count Size 0",
@@ -63,8 +63,7 @@
                 "youtube_link":"https://www.youtube.com/watch?v=FfJVYFt_ctA",
                 "id":3
             }
-        ] 
-        ,
+        ],
         "formulas":[
             {
                 "name":"Gentlease® 29.1 oz",
@@ -96,5 +95,7 @@
                 "youtube_link":"https://www.youtube.com/watch?v=16g0Wrd46IU",
                 "id":3
             }
-        ]  
+        ]   
 }
+
+
