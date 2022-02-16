@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function ItemCard({item, itemType}) {
+function ItemCard({item, itemType, setSelectedItem, setSelectedPath}) {
 
   const {name, brand, price, description, image, youtube_link, id, reviews} = item
 
@@ -24,20 +24,26 @@ function ItemCard({item, itemType}) {
    
       }
 
+  function selectItem(e){
+    localStorage.setItem("path", path)
+    setSelectedPath(path)
+    setSelectedItem(item)
+  }
+
   const path= `/${itemType}/${id}`
 
   return (
     <div className = "item-box">
-      <div className ="item-name">
-        <NavLink to={path} className="item-page-navigation">{name}</NavLink>
-       
-        {/* Want the below to navigate to that specific item's page */}
-        <p> by: {brand}</p>
-        <p>$ {price}</p>
-      </div>
       <div >
         <img src={image} alt={name} className = "item-image"/>
       </div>
+      <div className ="item-name">
+        <p>{brand}</p>
+        {/* Want the below to navigate to that specific item's page */}
+        <Link onClick={selectItem} to={path} className="item-page-navigation">{name}</Link>
+        <p>$ {price}</p>
+      </div>
+      
       <div className = "item-description">
         <button onClick={handleDetail} className="item-card-button">{showDetail ? "Hide Details" : "Show Details"}</button>
         <p>{showDetail ? description : null}</p>

@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 function Home ({setItemType, featuredItems}){
 
-
     useEffect(() => {
         setItemType("home")
     }, [])
@@ -15,7 +14,7 @@ function Home ({setItemType, featuredItems}){
     
     
     return (
-        <div>
+        <div className="content-container">
                       
             <div className="slide-container">
 
@@ -26,6 +25,7 @@ function Home ({setItemType, featuredItems}){
 
                     <div className="slides">
                         <img src={featuredItems[4]?.image} />
+
                     </div>
 
                     <div className="slides">
@@ -60,7 +60,6 @@ function Home ({setItemType, featuredItems}){
                     <NavLink className="home-buttons" to="/formula">
                         Formula
                     </NavLink>
-                
                 
             </div>
             

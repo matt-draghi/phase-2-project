@@ -3,7 +3,7 @@ import Filter from './Filter';
 import ItemCard from './ItemCard';
 
 
-function Strollers ({setItemType, strollers}){
+function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
@@ -30,7 +30,12 @@ function Strollers ({setItemType, strollers}){
     const stroller = stollerDisplay.map(stroller => {
         const uniqueKey = `${stroller.name}${stroller.id}`
         return (
-        <ItemCard item={stroller}key ={uniqueKey}/>
+            <ItemCard 
+                setSelectedPath={setSelectedPath}
+                setSelectedItem={setSelectedItem}
+                item={stroller} 
+                key ={uniqueKey} 
+                itemType={itemType}/>
         )
     })
     
