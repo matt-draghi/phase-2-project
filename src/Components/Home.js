@@ -11,39 +11,13 @@ function Home ({setItemType, featuredItems}){
     }, [])
     
     
-    const style = { 
-        color: "black",
-        textDecoration: "none",
-        backgroundColor: "rgb(138, 227, 237)",
-        width: "150px",
-        height: "30px",
-        borderRadius: ".8em",
-        fontWeight: "500",
-        margin: "auto",	
-        
-    }
-
-    const containerStyle = {
-        margin: "auto",
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        width: "500px",
-        gap: ".5em",
-        alignContent: "center",
-        justifyContent: "center",
-        
-    }
-
-    const slideContainerStyle = {
-        margin: "auto",
-        padding: "60px"
-    }
+    
     
     
     return (
         <div>
                       
-            <div className="slide-container" style={slideContainerStyle}>
+            <div className="slide-container">
 
                 <Fade>
                     <div className="slides">
@@ -61,7 +35,7 @@ function Home ({setItemType, featuredItems}){
 
             </div>
             
-            <div className="nav-container" style={containerStyle}>
+            <div className="nav-container-icons" >
 
                 
                     <NavLink to="/strollers">
@@ -77,13 +51,13 @@ function Home ({setItemType, featuredItems}){
                         <img src={featuredItems[2]?.image} style={{width: "150px"}} alt="formula"/>
                     </NavLink>
 
-                    <NavLink style={style} to="/strollers">
+                    <NavLink className="home-buttons" to="/strollers">
                         Strollers
                     </NavLink>
-                    <NavLink style={style} to="/diapers">
+                    <NavLink className="home-buttons" to="/diapers">
                         Diapers
                     </NavLink>
-                    <NavLink style={style} to="/formula">
+                    <NavLink className="home-buttons" to="/formula">
                         Formula
                     </NavLink>
                 
