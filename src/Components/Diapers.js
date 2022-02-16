@@ -44,7 +44,7 @@ function Diapers ({setItemType, diapers}){
  };
  // ^^^^^ delete if cart is not working 
 
-    const orignal = diapers
+   
     
     const filterDisplay = diapers               
         .filter((diaper) =>{

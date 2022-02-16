@@ -60,7 +60,7 @@ function Formula ({setItemType, formulas}){
     })
 
 
-    const orignal = formulas
+   
 
     const displayItem = filterDisplay.map(formula => {
         const uniqueKey = `${formula.name}${formula.id}`

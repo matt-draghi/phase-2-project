@@ -49,8 +49,7 @@ function Strollers ({setItemType, strollers}){
 
     
     // ^^^^^ delete if cart is not working 
-    const orignal = strollers
-    console.log(orignal)
+  
 
     const  filterDisplay = strollers
     .filter((stroller) =>{
