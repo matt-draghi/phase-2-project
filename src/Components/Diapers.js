@@ -3,13 +3,14 @@ import Filter from './Filter';
 import ItemCard from './ItemCard';
 
 
-function Diapers ({setItemType, diapers}){
+function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    setItemType("diapers")
-    
+    useEffect(() => {
+        setItemType("diapers")
+    }, [])    
     const diapersDisplay = diapers               
         .filter((diaper) =>{
             return (
@@ -35,12 +36,13 @@ function Diapers ({setItemType, diapers}){
             {diapersDisplay.map((diaper)=>{
                 const uniqueKey = `${diaper.name}${diaper.id}`
                 return(
-                    <>
-                        <ItemCard 
-                            key={uniqueKey}    
-                            item={diaper}
-                        />
-                    </>
+                    <ItemCard 
+                        setSelectedItem={setSelectedItem}
+                        setSelectedPath={setSelectedPath}
+                        key={uniqueKey}    
+                        item={diaper}
+                        itemType={itemType}
+                     />  
                 )
             })}
         </div>

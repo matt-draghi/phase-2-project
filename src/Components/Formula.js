@@ -3,14 +3,16 @@ import {useEffect, useState} from "react"
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
-function Formula ({setItemType, formulas}){
+function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    setItemType("formulas")
+    useEffect(() => {
+        setItemType("formulas")
+    }, [])
 
-    const fomulaDisplay = formulas
+    const formulaDisplay = formulas
       .filter((formula) =>{
         return (
             formula.name.toLowerCase().includes(search.toLowerCase()) || formula.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -32,14 +34,18 @@ function Formula ({setItemType, formulas}){
                 getSearch ={getSearch}
                 getSortBy ={getSortBy}/>
             </div>
-            {fomulaDisplay.map(formula => {
+            {formulaDisplay.map(formula => {
                 const uniqueKey = `${formula.name}${formula.id}`
                 return(
-                    <>
-                        <ItemCard item={formula} key={uniqueKey}/>
-                   </>
-                    )
-                })}
+                    <ItemCard 
+                        setSelectedPath={setSelectedPath}
+                        setSelectedItem={setSelectedItem} 
+                        item={formula} 
+                        key={uniqueKey} 
+                        itemType={itemType}
+                    />
+                )
+            })}
         </div>
     )
 }
