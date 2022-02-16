@@ -31,6 +31,7 @@ function Strollers ({setItemType, strollers}){
       } else {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
       }
+    //   console.log(product)
     };
   
     const onRemove = (product) => {
@@ -45,6 +46,8 @@ function Strollers ({setItemType, strollers}){
         );
       }
     };
+
+    
     // ^^^^^ delete if cart is not working 
     const orignal = strollers
     console.log(orignal)
@@ -70,10 +73,6 @@ function Strollers ({setItemType, strollers}){
         )
     })
 
-
-
- 
-    octwxfgy
     
     return (
         <div>

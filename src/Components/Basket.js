@@ -24,7 +24,7 @@ export default function Basket({cartItems, onRemove, onAdd}) {
           <div className="col-2 text-right">
             
             {item.qty} x {item.price}
-            {console.log(item)}
+
           
             {/* .toFixed(2) */}
           </div>
