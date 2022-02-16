@@ -49,7 +49,7 @@ function Strollers ({setItemType, strollers}){
     const orignal = strollers
     console.log(orignal)
 
-    const  FilterDisplay = strollers
+    const  filterDisplay = strollers
     .filter((stroller) =>{
         return (
           stroller.name.toLowerCase().includes(search.toLowerCase()) || stroller.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -63,15 +63,17 @@ function Strollers ({setItemType, strollers}){
         }
     })
 
-    const displayItem = FilterDisplay.map(stroller => {
+    const displayItem = filterDisplay.map(stroller => {
         const uniqueKey = `${stroller.name}${stroller.id}`
         return (
-        <ItemCard item={stroller}key ={uniqueKey}  onAdd={onAdd} FilterDisplay={FilterDisplay}/>
+        <ItemCard item={stroller}key ={uniqueKey}  onAdd={onAdd} item={stroller}/>
         )
     })
 
 
 
+ 
+    octwxfgy
     
     return (
         <div>
@@ -86,7 +88,7 @@ function Strollers ({setItemType, strollers}){
                  cartItems={cartItems}
                  onAdd={onAdd}
                  onRemove={onRemove}
-                 FilterDisplay={FilterDisplay}/>
+                />
             </div>
             <div>
                 {displayItem}

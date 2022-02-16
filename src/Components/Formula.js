@@ -45,7 +45,7 @@ function Formula ({setItemType, formulas}){
  };
  // ^^^^^ delete if cart is not working 
 
-    const FilterDisplay = formulas
+    const filterDisplay = formulas
       .filter((formula) =>{
         return (
             formula.name.toLowerCase().includes(search.toLowerCase()) || formula.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -62,10 +62,10 @@ function Formula ({setItemType, formulas}){
 
     const orignal = formulas
 
-    const displayItem = FilterDisplay.map(formula => {
+    const displayItem = filterDisplay.map(formula => {
         const uniqueKey = `${formula.name}${formula.id}`
         return (
-        <ItemCard item={formula}key ={uniqueKey}  onAdd={onAdd} FilterDisplay={FilterDisplay}/>
+        <ItemCard item={formula}key ={uniqueKey}  onAdd={onAdd} item={formula}/>
         )
     })
   
@@ -84,7 +84,7 @@ function Formula ({setItemType, formulas}){
                  cartItems={cartItems}
                  onAdd={onAdd}
                  onRemove={onRemove}
-                 FilterDisplay={FilterDisplay}/>
+                 />
             </div>
             {/* // ^^^^^ delete if cart is not working  */}
             <div>

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 //delete onAdd Props if it is not working 
 
-function ItemCard({item, itemType , onAdd, displayItem}) {
+function ItemCard({item, itemType , onAdd}) {
 
   //delete onAdd Props if it is not working 
 
@@ -61,7 +61,7 @@ function ItemCard({item, itemType , onAdd, displayItem}) {
 
       {/* // delete if cart is not working  */}
       <div>
-        <button onClick={()=>onAdd(displayItem)}>Add to Cart</button>
+        <button onClick={()=>onAdd(item)}>Add to Cart</button>
       </div>
       {/* // delete if cart is not working  */}
 

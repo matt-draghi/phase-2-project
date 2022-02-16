@@ -46,7 +46,7 @@ function Diapers ({setItemType, diapers}){
 
     const orignal = diapers
     
-    const FilterDisplay = diapers               
+    const filterDisplay = diapers               
         .filter((diaper) =>{
             return (
                 diaper.name.toLowerCase().includes(search.toLowerCase()) || diaper.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -60,10 +60,10 @@ function Diapers ({setItemType, diapers}){
             }
         })
 
-        const displayItem = FilterDisplay.map(diaper => {
+        const displayItem = filterDisplay.map(diaper => {
             const uniqueKey = `${diaper.name}${diaper.id}`
             return (
-            <ItemCard item={diaper}key ={uniqueKey}  onAdd={onAdd} FilterDisplay={FilterDisplay}/>
+            <ItemCard item={diaper}key ={uniqueKey}  onAdd={onAdd} item={diaper}/>
             )
         })
 
@@ -82,7 +82,7 @@ function Diapers ({setItemType, diapers}){
                  cartItems={cartItems}
                  onAdd={onAdd}
                  onRemove={onRemove}
-                 FilterDisplay={FilterDisplay}/>
+                />
             </div>
             {/* // ^^^^^ delete if cart is not working  */}
             <div>
