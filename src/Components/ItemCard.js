@@ -40,22 +40,22 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath}) {
       <div className ="item-name">
         <p>{brand}</p>
         {/* Want the below to navigate to that specific item's page */}
-        <Link onClick={selectItem} to={path}>{name}</Link>
+        <Link onClick={selectItem} to={path} className="item-page-navigation">{name}</Link>
         <p>$ {price}</p>
       </div>
       
       <div className = "item-description">
-        <button onClick={handleDetail}>{showDetail ? "Hide Detail" : "Show Detail"}</button>
+        <button onClick={handleDetail} className="item-card-button">{showDetail ? "Hide Details" : "Show Details"}</button>
         <p>{showDetail ? description : null}</p>
       </div>
     
-        <a href={youtube_link}>Youtube Link</a>
+        <a href={youtube_link} >Watch the Video!</a>
      
       <div>
         <form onSubmit ={handleSubmit}>
-          <label>Reviews</label>
+          <label>Reviews </label>
           <input type="text" onChange={handleReviewInput} value={reviewInput}/>
-          <button>submit</button>
+          <button className="submit-button">submit</button>
      
      
         </form>

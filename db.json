@@ -225,6 +225,36 @@
                 "reviews": [],
                 "youtube_link":"https://www.youtube.com/watch?v=2uBZTU0zsgo",
                 "id":1
+            },
+            {
+                "name":"formula photo",
+                "brand":"Pampers",
+                "price":"26.99",
+                "description":"Super-soft Pampers Swaddlers diapers wrap your baby in plush comfort and provide up to 12 hours of overnight protection. Parents will also appreciate the built-in wetness indicator that changes color to alert when a diaper change may be needed. ** Fits babies < 10 lb.** ** Color-changing wetness indicator makes it easy to tell when baby may need a new diaper **",
+                "image":"https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/10/345237-Best-formula-for-babies-Newborns-breastfed-and-more-1296x728-Header-01adb9-1024x575.jpg?w=1155&h=1528",
+                "reviews": [],
+                "youtube_link":"https://www.youtube.com/watch?v=9WmQfarvY0s",
+                "id":1
+            },
+            {
+                "name":"stroller photo",
+                "brand":"Pampers",
+                "price":"26.99",
+                "description":"Super-soft Pampers Swaddlers diapers wrap your baby in plush comfort and provide up to 12 hours of overnight protection. Parents will also appreciate the built-in wetness indicator that changes color to alert when a diaper change may be needed. ** Fits babies < 10 lb.** ** Color-changing wetness indicator makes it easy to tell when baby may need a new diaper **",
+                "image":"https://post.healthline.com/wp-content/uploads/2020/03/Umbrella_Strollers_732x549.png",
+                "reviews": [],
+                "youtube_link":"https://www.youtube.com/watch?v=9WmQfarvY0s",
+                "id":1
+            },
+            {
+                "name":"diaper photo",
+                "brand":"Pampers",
+                "price":"26.99",
+                "description":"Super-soft Pampers Swaddlers diapers wrap your baby in plush comfort and provide up to 12 hours of overnight protection. Parents will also appreciate the built-in wetness indicator that changes color to alert when a diaper change may be needed. ** Fits babies < 10 lb.** ** Color-changing wetness indicator makes it easy to tell when baby may need a new diaper **",
+                "image":"https://images.indianexpress.com/2019/07/baby1.jpeg",
+                "reviews": [],
+                "youtube_link":"https://www.youtube.com/watch?v=9WmQfarvY0s",
+                "id":1
             }
         ]
 }
