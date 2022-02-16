@@ -41,9 +41,10 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
         <img src={image} alt={name} className = "item-image"/>
       </div>
       <div className ="item-name">
-        <p>{brand}</p>
+       
         {/* Want the below to navigate to that specific item's page */}
         <Link onClick={selectItem} to={path} className="item-page-navigation">{name}</Link>
+        <p>by: {brand}</p>
         <p>$ {price}</p>
       </div>
       
