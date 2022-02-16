@@ -3,6 +3,10 @@ import {useEffect, useState} from "react"
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
+
+  // delete if cart is not working 
+  import Basket from './Basket'; 
+  // ^^^^^ delete if cart is not working 
 function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
@@ -12,7 +16,37 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
         setItemType("formulas")
     }, [])
 
-    const formulaDisplay = formulas
+     // delete if cart is not working 
+ const [cartItems, setCartItems] = useState([]);
+  
+ const onAdd = (product) => {
+   const exist = cartItems.find((x) => x.id === product.id);
+   if (exist) {
+     setCartItems(
+       cartItems.map((x) =>
+         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+       )
+     );
+   } else {
+     setCartItems([...cartItems, { ...product, qty: 1 }]);
+   }
+ };
+
+ const onRemove = (product) => {
+   const exist = cartItems.find((x) => x.id === product.id);
+   if (exist.qty === 1) {
+     setCartItems(cartItems.filter((x) => x.id !== product.id));
+   } else {
+     setCartItems(
+       cartItems.map((x) =>
+         x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+       )
+     );
+   }
+ };
+ // ^^^^^ delete if cart is not working 
+
+    const filterDisplay = formulas
       .filter((formula) =>{
         return (
             formula.name.toLowerCase().includes(search.toLowerCase()) || formula.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -25,6 +59,20 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
             return itemA.name.localeCompare(itemB.name)
         }
     })
+
+
+    const displayItem = filterDisplay.map(formula => {
+        const uniqueKey = `${formula.name}${formula.id}`
+        return (
+                    <ItemCard 
+                        setSelectedPath={setSelectedPath}
+                        setSelectedItem={setSelectedItem} 
+                        item={formula} 
+                        key={uniqueKey} 
+                        itemType={itemType}
+                        onAdd={onAdd}
+                    />        )
+    })
   
     return (
         <div>
@@ -34,18 +82,20 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
                 getSearch ={getSearch}
                 getSortBy ={getSortBy}/>
             </div>
-            {formulaDisplay.map(formula => {
-                const uniqueKey = `${formula.name}${formula.id}`
-                return(
-                    <ItemCard 
-                        setSelectedPath={setSelectedPath}
-                        setSelectedItem={setSelectedItem} 
-                        item={formula} 
-                        key={uniqueKey} 
-                        itemType={itemType}
-                    />
-                )
-            })}
+
+            {/* // delete if cart is not working  */}
+            <div>
+                <Basket 
+                 cartItems={cartItems}
+                 onAdd={onAdd}
+                 onRemove={onRemove}
+                 />
+            </div>
+            {/* // ^^^^^ delete if cart is not working  */}
+            <div>
+                {displayItem}
+            </div>
+
         </div>
     )
 }

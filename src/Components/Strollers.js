@@ -2,18 +2,56 @@ import React, {useState, useEffect} from 'react';
 import Filter from './Filter';
 import ItemCard from './ItemCard';
 
+  // delete if cart is not working 
+  import Basket from './Basket'; 
+  // ^^^^^ delete if cart is not working 
+
 
 function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
+
     useEffect(() => {
         setItemType("strollers")
     }, [])
+
+    // delete if cart is not working 
+    const [cartItems, setCartItems] = useState([]);
+  
+    const onAdd = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist) {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...product, qty: 1 }]);
+      }
+    //   console.log(product)
+    };
+  
+    const onRemove = (product) => {
+      const exist = cartItems.find((x) => x.id === product.id);
+      if (exist.qty === 1) {
+        setCartItems(cartItems.filter((x) => x.id !== product.id));
+      } else {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          )
+        );
+      }
+    };
+
     
-   
-    const  stollerDisplay = strollers
+    // ^^^^^ delete if cart is not working 
+  
+
+    const  filterDisplay = strollers
     .filter((stroller) =>{
         return (
           stroller.name.toLowerCase().includes(search.toLowerCase()) || stroller.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -27,7 +65,7 @@ function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelec
         }
     })
 
-    const stroller = stollerDisplay.map(stroller => {
+    const displayItem = filterDisplay.map(stroller => {
         const uniqueKey = `${stroller.name}${stroller.id}`
         return (
             <ItemCard 
@@ -35,9 +73,12 @@ function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelec
                 setSelectedItem={setSelectedItem}
                 item={stroller} 
                 key ={uniqueKey} 
-                itemType={itemType}/>
+                itemType={itemType}
+                onAdd={onAdd}
+            />
         )
     })
+
     
     return (
         <div>
@@ -48,9 +89,18 @@ function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelec
                 getSortBy ={getSortBy}/>
             </div>
             <div>
-                {stroller}
+                <Basket 
+                 cartItems={cartItems}
+                 onAdd={onAdd}
+                 onRemove={onRemove}
+                />
             </div>
-            
+            <div>
+                {displayItem}
+            </div>   
+            {/* // delete if cart is not working  */}
+           
+            {/* // ^^^^^ delete if cart is not working  */}
         </div>
     )
 }

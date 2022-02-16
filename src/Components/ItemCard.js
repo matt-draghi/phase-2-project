@@ -1,13 +1,16 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 
-function ItemCard({item, itemType, setSelectedItem, setSelectedPath}) {
+//delete onAdd Props if it is not working 
+function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
 
   const {name, brand, price, description, image, youtube_link, id, reviews} = item
 
   const [showDetail, setShowDetail]=useState(false)
   const [reviewInput, setReviewInput] = useState("")
   
+  console.log(item)
+
   
 
   function handleDetail(){
@@ -56,10 +59,15 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath}) {
           <label>Reviews </label>
           <input type="text" onChange={handleReviewInput} value={reviewInput}/>
           <button className="submit-button">submit</button>
-     
-     
-        </form>
+         </form>
       </div>
+
+      {/* // delete if cart is not working  */}
+      <div>
+        <button onClick={()=>onAdd(item)}>Add to Cart</button>
+      </div>
+      {/* // delete if cart is not working  */}
+
     </div>
   )
 }
