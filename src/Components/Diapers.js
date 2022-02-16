@@ -7,7 +7,7 @@ import ItemCard from './ItemCard';
   // ^^^^^ delete if cart is not working 
 
 
-function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedPath}){
+function Diapers ({setItemType, diapers}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
@@ -47,10 +47,6 @@ function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedP
    
     
     const filterDisplay = diapers               
-    useEffect(() => {
-        setItemType("diapers")
-    }, [])    
-    const diapersDisplay = diapers               
         .filter((diaper) =>{
             return (
                 diaper.name.toLowerCase().includes(search.toLowerCase()) || diaper.brand.toLowerCase().includes(search.toLowerCase()) 
@@ -92,18 +88,6 @@ function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedP
             <div>
             {displayItem}
             </div>
-            {diapersDisplay.map((diaper)=>{
-                const uniqueKey = `${diaper.name}${diaper.id}`
-                return(
-                    <ItemCard 
-                        setSelectedItem={setSelectedItem}
-                        setSelectedPath={setSelectedPath}
-                        key={uniqueKey}    
-                        item={diaper}
-                        itemType={itemType}
-                     />  
-                )
-            })}
         </div>
     )
 }
