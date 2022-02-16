@@ -26,7 +26,7 @@
   color: #61dafb;
 }
 
-.ListItem{
+/* .ListItem{
   display: flex;
   width:100%;
   height:250px;
@@ -35,7 +35,7 @@
 
 .ListItem h3.name{
   margin-top: 50px;
-}
+} */
 
 .item-box{
   display: inline;
@@ -169,22 +169,25 @@ text-right{
   justify-content: center;
 }
 
-.slide-container {
+/* .slide-container {
   margin: auto;
   padding: 60px;
-}
+} */
 .content-container{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .slide-container{
+  margin: auto;
+  padding: 60px;
   max-height: 800px;
   max-width: 800px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
   overflow: hidden;
 }
 

@@ -67,7 +67,14 @@ function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedP
         const displayItem = filterDisplay.map(diaper => {
             const uniqueKey = `${diaper.name}${diaper.id}`
             return (
-            <ItemCard item={diaper}key ={uniqueKey}  onAdd={onAdd} item={diaper}/>
+                <ItemCard 
+                        setSelectedItem={setSelectedItem}
+                        setSelectedPath={setSelectedPath}
+                        key={uniqueKey}    
+                        item={diaper}
+                        itemType={itemType}
+                        onAdd={onAdd}
+                     />             
             )
         })
 
@@ -92,18 +99,6 @@ function Diapers ({setItemType, diapers, itemType, setSelectedItem, setSelectedP
             <div>
             {displayItem}
             </div>
-            {diapersDisplay.map((diaper)=>{
-                const uniqueKey = `${diaper.name}${diaper.id}`
-                return(
-                    <ItemCard 
-                        setSelectedItem={setSelectedItem}
-                        setSelectedPath={setSelectedPath}
-                        key={uniqueKey}    
-                        item={diaper}
-                        itemType={itemType}
-                     />  
-                )
-            })}
         </div>
     )
 }

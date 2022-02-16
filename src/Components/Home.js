@@ -14,7 +14,7 @@ function Home ({setItemType, featuredItems}){
     
     
     return (
-        <div className="content-container">
+        <div className="home-content-container">
                       
             <div className="slide-container">
 

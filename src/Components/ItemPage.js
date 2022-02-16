@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import ReviewCard from "./ReviewCard"
+import ReviewCard from "./ReviewCard.js"
 
 function ItemPage({selectedItem,setSelectedItem}){
     
