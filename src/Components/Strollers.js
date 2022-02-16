@@ -7,7 +7,7 @@ import ItemCard from './ItemCard';
   // ^^^^^ delete if cart is not working 
 
 
-function Strollers ({setItemType, strollers}){
+function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
@@ -68,7 +68,14 @@ function Strollers ({setItemType, strollers}){
     const displayItem = filterDisplay.map(stroller => {
         const uniqueKey = `${stroller.name}${stroller.id}`
         return (
-        <ItemCard item={stroller}key ={uniqueKey}  onAdd={onAdd} item={stroller}/>
+            <ItemCard 
+                setSelectedPath={setSelectedPath}
+                setSelectedItem={setSelectedItem}
+                item={stroller} 
+                key ={uniqueKey} 
+                itemType={itemType}
+                onAdd={onAdd}
+            />
         )
     })
 

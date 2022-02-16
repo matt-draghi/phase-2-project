@@ -1,20 +1,23 @@
+
 .App {
   text-align: center;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
 }
+/* TODO: FIX STYLING */
 
 .App-header {
-  background-color: rgb(138, 227, 237);
+  background-color: rgb(124, 180, 233);
   height:50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
 }
 
 .App-header a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 2px;
   margin: 25px;;
 }
@@ -40,11 +43,24 @@
   background-position: center 90%;
   float: left;
   margin: 2%;
-  padding: 1%;
-  outline: #3B0B0B dotted thick;
+  padding: 2%;
+  border-style: groove;
   transition: 0.75s;
-  opacity: 1; 
-  
+  opacity: 1;  
+}
+
+.item-page-navigation {
+  font-weight: bold;
+}
+
+.item-box a{
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+.item-box a:hover{
+  color: rgb(124, 180, 233);
 }
 
 .item-image{
@@ -53,14 +69,20 @@
   background-size: cover;
 }
 
+.item-card-button {
+  background-color: rgb(138, 227, 237);
+  width: 120px;
+  height: 30px;
+  border-radius: .5em;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .stroller-filter{
   position:absolute;
   top:0;
   right:0;
 }
-
-
-
 
 /* // delete if cart not working */
 
@@ -87,7 +109,7 @@
 img.small{
   max-height: 8rem;
 }
-
+/* Add class to this button */
 button{
   font-size: 0.8rem;
   padding:0.2rem;
@@ -114,4 +136,106 @@ button.badge {
 }
 text-right{
   text-align: right;
+}
+
+.home-buttons {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(138, 227, 237);
+  width: 150px;
+  height: 30px;
+  border-radius: .8em;
+  font-weight: 500;
+  margin: auto;
+}
+
+.submit-button {
+  background-color: rgb(138, 227, 237);
+  width: 80px;
+  height: 23px;
+  border-radius: .5em;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.nav-container-icons {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 500px;
+  gap: .5em;
+  align-content: center;
+  justify-content: center;
+}
+
+.slide-container {
+  margin: auto;
+  padding: 60px;
+}
+.content-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-container{
+  max-height: 800px;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.navlink-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item-info-container{
+  border-bottom: groove black;
+  padding-bottom: 20px;
+}
+
+.item-info-container img{
+  height: 600px;
+}
+
+.review-container{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-card{
+  border-top: groove;
+  width: 90%;
+  /* margin-bottom:50px; */
+  display:flex;
+  padding: 50px;
+}
+
+.review-container button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.new-review-form{
+  width:90%;
+  /* border: groove; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-review-form input[type="text"]{
+  width: 70%;
+  height: 100px;
+}
+
+.new-review-form > *{
+  margin-bottom: 20px;;
 }

@@ -7,13 +7,14 @@ import ItemCard from './ItemCard';
   // delete if cart is not working 
   import Basket from './Basket'; 
   // ^^^^^ delete if cart is not working 
-
-function Formula ({setItemType, formulas}){
+function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelectedPath}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
 
-    setItemType("formulas")
+    useEffect(() => {
+        setItemType("formulas")
+    }, [])
 
      // delete if cart is not working 
  const [cartItems, setCartItems] = useState([]);
@@ -60,13 +61,17 @@ function Formula ({setItemType, formulas}){
     })
 
 
-   
-
     const displayItem = filterDisplay.map(formula => {
         const uniqueKey = `${formula.name}${formula.id}`
         return (
-        <ItemCard item={formula}key ={uniqueKey}  onAdd={onAdd} item={formula}/>
-        )
+                    <ItemCard 
+                        setSelectedPath={setSelectedPath}
+                        setSelectedItem={setSelectedItem} 
+                        item={formula} 
+                        key={uniqueKey} 
+                        itemType={itemType}
+                        onAdd={onAdd}
+                    />        )
     })
   
     return (
@@ -90,6 +95,7 @@ function Formula ({setItemType, formulas}){
             <div>
                 {displayItem}
             </div>
+
         </div>
     )
 }
