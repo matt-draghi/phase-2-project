@@ -4,62 +4,93 @@ import 'react-slideshow-image/dist/styles.css'
 import { NavLink } from 'react-router-dom';
 
 function Home ({setItemType, featuredItems}){
-    const [home, setHome] = useState([])
-
-    setItemType("home")
-    //TODO: wrap setItemType in useEffect maybe? 
-    // useEffect(() => {
-    //     fetch(`http://localhost:4000/home`)
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //       setHome(data)
-    //     })
-    // }, [])
 
 
-    //TODO: add nice photos to db.json
-    const imageArray = [
-        "https://images.squarespace-cdn.com/content/v1/5570490fe4b072434a9da70b/1501112431054-HOHTX98ASD4MRP2JPRS5/1442326024894.jpeg?format=1000w",
-        "https://www.gillespieapproach.com/wp-content/uploads/2019/05/we-are-the-happy-baby-people-gillespie-approach-craniosacral-fascial-therapy-770x405.jpg",
-        "https://i.kym-cdn.com/entries/icons/original/000/027/475/Screen_Shot_2018-10-25_at_11.02.15_AM.png"
-    ]
+    useEffect(() => {
+        setItemType("home")
+    }, [])
+    
+    
+    const style = { 
+        color: "black",
+        textDecoration: "none",
+        backgroundColor: "rgb(138, 227, 237)",
+        width: "150px",
+        height: "30px",
+        borderRadius: ".8em",
+        fontWeight: "500",
+        margin: "auto",	
+        
+    }
 
+    const containerStyle = {
+        margin: "auto",
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        width: "500px",
+        gap: ".5em",
+        alignContent: "center",
+        justifyContent: "center",
+        
+    }
+
+    const slideContainerStyle = {
+        margin: "auto",
+        padding: "60px"
+    }
+    
     
     return (
         <div>
                       
-            <div className="container">
+            <div className="slide-container" style={slideContainerStyle}>
 
                 <Fade>
-                    <div className="mySlides">
-                        <img src={imageArray[0]} />
+                    <div className="slides">
+                        <img src={featuredItems[3]?.image} />
                     </div>
 
-                    <div className="mySlides">
-                        <img src={imageArray[1]} />
+                    <div className="slides">
+                        <img src={featuredItems[4]?.image} />
                     </div>
 
-                    <div className="mySlides">
-                        <img src={imageArray[2]} style={{width: "100%"}}/>
+                    <div className="slides">
+                        <img src={featuredItems[5]?.image} />
                     </div>
                 </Fade>  
 
             </div>
             
-            <div>
-                <NavLink to="/strollers">
-                    Strollers
-                    <img src={featuredItems[0]?.image} style={{width: "100px"}} />
-                </NavLink>
-                <NavLink to="/diapers">
-                    Diapers
-                     <img src={featuredItems[1]?.image} style={{width: "100px"}} />
-                </NavLink>
-                <NavLink to="/formula">
-                    Formula
-                     <img src={featuredItems[2]?.image} style={{width: "100px"}} />
-                </NavLink>
+            <div className="nav-container" style={containerStyle}>
+
+                
+                    <NavLink to="/strollers">
+                        <img src={featuredItems[0]?.image} style={{width: "150px"}} alt="strollers" />
+                    </NavLink>
+            
+                    <NavLink to="/diapers">
+                        <img src={featuredItems[1]?.image} style={{width: "150px"}} alt="diapers"/>
+                    </NavLink>
+                
+               
+                    <NavLink to="/formula">
+                        <img src={featuredItems[2]?.image} style={{width: "150px"}} alt="formula"/>
+                    </NavLink>
+
+                    <NavLink style={style} to="/strollers">
+                        Strollers
+                    </NavLink>
+                    <NavLink style={style} to="/diapers">
+                        Diapers
+                    </NavLink>
+                    <NavLink style={style} to="/formula">
+                        Formula
+                    </NavLink>
+                
+                
             </div>
+            
+
         </div>
         
 
