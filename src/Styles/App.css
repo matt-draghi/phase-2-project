@@ -90,3 +90,50 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.item-info-container{
+  border-bottom: groove black;
+  padding-bottom: 20px;
+}
+
+.item-info-container img{
+  height: 600px;
+}
+
+.review-container{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-card{
+  border-top: groove;
+  width: 90%;
+  /* margin-bottom:50px; */
+  display:flex;
+  padding: 50px;
+}
+
+.review-container button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.new-review-form{
+  width:90%;
+  /* border: groove; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-review-form input[type="text"]{
+  width: 70%;
+  height: 100px;
+}
+
+.new-review-form > *{
+  margin-bottom: 20px;;
+}

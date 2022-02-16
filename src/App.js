@@ -21,7 +21,6 @@ function App() {
        .then(resp => resp.json())
        .then(data => {
          setItemsList(data)
-         console.log(data)
        })
      },[itemType])
 
@@ -43,8 +42,8 @@ function App() {
         <Route exact path="/formulas">
            <Formula setSelectedPath={setSelectedPath} setSelectedItem={setSelectedItem} setItemType={setItemType} formulas={itemsList} itemType={itemType}/>
         </Route>
-        <Route path={selectedItem}>
-          <ItemPage item={selectedItem}/>
+        <Route path={selectedPath}>
+          <ItemPage selectedPath={selectedPath} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>
         </Route>
       </Switch>
     </div>

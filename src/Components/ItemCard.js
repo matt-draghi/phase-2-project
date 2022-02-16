@@ -25,6 +25,7 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath}) {
       }
 
   function selectItem(e){
+    localStorage.setItem("path", path)
     setSelectedPath(path)
     setSelectedItem(item)
   }
