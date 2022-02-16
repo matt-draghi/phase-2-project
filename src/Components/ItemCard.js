@@ -1,13 +1,19 @@
 import React,{useState} from 'react'
 import { NavLink } from 'react-router-dom'
 
-function ItemCard({item, itemType}) {
+//delete onAdd Props if it is not working 
+
+function ItemCard({item, itemType , onAdd, displayItem}) {
+
+  //delete onAdd Props if it is not working 
 
   const {name, brand, price, description, image, youtube_link, id, reviews} = item
 
   const [showDetail, setShowDetail]=useState(false)
   const [reviewInput, setReviewInput] = useState("")
   
+  console.log(item)
+
   
 
   function handleDetail(){
@@ -50,10 +56,15 @@ function ItemCard({item, itemType}) {
           <label>Reviews</label>
           <input type="text" onChange={handleReviewInput} value={reviewInput}/>
           <button>submit</button>
-     
-     
         </form>
       </div>
+
+      {/* // delete if cart is not working  */}
+      <div>
+        <button onClick={()=>onAdd(displayItem)}>Add to Cart</button>
+      </div>
+      {/* // delete if cart is not working  */}
+
     </div>
   )
 }
