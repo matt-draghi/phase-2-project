@@ -6,17 +6,9 @@ import { NavLink } from 'react-router-dom';
 function Home ({setItemType, featuredItems}){
     const [home, setHome] = useState([])
 
-    setItemType("home")
-    //TODO: wrap setItemType in useEffect maybe? 
-    // useEffect(() => {
-    //     fetch(`http://localhost:4000/home`)
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //       setHome(data)
-    //     })
-    // }, [])
-
-
+    useEffect(() => {
+        setItemType("home")
+    }, [])
     //TODO: add nice photos to db.json
     const imageArray = [
         "https://images.squarespace-cdn.com/content/v1/5570490fe4b072434a9da70b/1501112431054-HOHTX98ASD4MRP2JPRS5/1442326024894.jpeg?format=1000w",
@@ -26,17 +18,17 @@ function Home ({setItemType, featuredItems}){
 
     
     return (
-        <div>
+        <div className="content-container">
                       
-            <div className="container">
+            <div className="slide-container">
 
                 <Fade>
                     <div className="mySlides">
-                        <img src={imageArray[0]} />
+                        <img src={imageArray[0]} style={{width: "100%"}}/>
                     </div>
 
                     <div className="mySlides">
-                        <img src={imageArray[1]} />
+                        <img src={imageArray[1]} style={{width: "100%"}}/>
                     </div>
 
                     <div className="mySlides">
@@ -46,7 +38,7 @@ function Home ({setItemType, featuredItems}){
 
             </div>
             
-            <div>
+            <div className="navlink-container">
                 <NavLink to="/strollers">
                     Strollers
                     <img src={featuredItems[0]?.image} style={{width: "100px"}} />
@@ -55,7 +47,7 @@ function Home ({setItemType, featuredItems}){
                     Diapers
                      <img src={featuredItems[1]?.image} style={{width: "100px"}} />
                 </NavLink>
-                <NavLink to="/formula">
+                <NavLink to="/formulas">
                     Formula
                      <img src={featuredItems[2]?.image} style={{width: "100px"}} />
                 </NavLink>

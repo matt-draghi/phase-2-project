@@ -1,8 +1,12 @@
-function ItemPage(){
+function ItemPage({item}){
 
-    <div>
+    const {name, brand, price, description, image, youtube_link, id, reviews} = item
 
-    </div>
+    return(
+        <div>
+            <h1>{name}</h1>
+        </div>
+    )
 }
 
 export default ItemPage

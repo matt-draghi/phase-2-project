@@ -1,20 +1,22 @@
+
 .App {
   text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 
 }
+/* TODO: FIX STYLING */
 
 .App-header {
-  background-color: rgb(138, 227, 237);
+  background-color: rgb(124, 180, 233);
   height:50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
 }
 
 .App-header a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 2px;
   margin: 25px;;
 }
@@ -41,10 +43,20 @@
   float: left;
   margin: 2%;
   padding: 1%;
-  outline: #3B0B0B dotted thick;
-  transition: 0.75s;
+  border: groove;
+  /* transition: 0.75s; */
   opacity: 1; 
   
+}
+
+.item-box a{
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+.item-box a:hover{
+  color: rgb(124, 180, 233);
 }
 
 .item-image{
@@ -57,4 +69,24 @@
   position:absolute;
   top:0;
   right:0;
+}
+
+.content-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-container{
+  max-height: 800px;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.navlink-container{
+  display: flex;
+  justify-content: space-evenly;
 }
