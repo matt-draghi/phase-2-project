@@ -53,12 +53,15 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
         )
     })
     .sort((itemA, itemB) =>{
-        if(sortBy === "price"){
-            return itemB.price - itemA.price
-        }else{
-            return itemA.name.localeCompare(itemB.name)
-        }
-    })
+      if(sortBy === "price"){
+          return itemB.price - itemA.price
+      }else if(sortBy === "name"){
+          return itemA.name.localeCompare(itemB.name)
+      }
+      else if(sortBy === ""){
+        return itemA.id - itemB.id
+      }
+  })
 
 
     const displayItem = filterDisplay.map(formula => {
@@ -84,7 +87,7 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
             </div>
 
             {/* // delete if cart is not working  */}
-            <div>
+            <div className="basket-container">
                 <Basket 
                  cartItems={cartItems}
                  onAdd={onAdd}
@@ -92,7 +95,7 @@ function Formula ({setItemType, formulas, itemType, setSelectedItem, setSelected
                  />
             </div>
             {/* // ^^^^^ delete if cart is not working  */}
-            <div>
+            <div className="item-list-card-container">
                 {displayItem}
             </div>
 

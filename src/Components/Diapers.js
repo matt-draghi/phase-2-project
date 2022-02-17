@@ -55,8 +55,11 @@ function Diapers ({setItemType, diapers, setSelectedItem, setSelectedPath, itemT
         .sort((itemA, itemB) =>{
             if(sortBy === "price"){
                 return itemB.price - itemA.price
-            }else{
+            }else if(sortBy === "name"){
                 return itemA.name.localeCompare(itemB.name)
+            }
+            else if(sortBy === ""){
+              return itemA.id - itemB.id
             }
         })
 
@@ -84,7 +87,7 @@ function Diapers ({setItemType, diapers, setSelectedItem, setSelectedPath, itemT
             </div>
 
              {/* // delete if cart is not working  */}
-             <div>
+             <div className="basket-container">
                 <Basket 
                  cartItems={cartItems}
                  onAdd={onAdd}
@@ -92,7 +95,7 @@ function Diapers ({setItemType, diapers, setSelectedItem, setSelectedPath, itemT
                 />
             </div>
             {/* // ^^^^^ delete if cart is not working  */}
-            <div>
+            <div className="item-list-card-container">
             {displayItem}
             </div>
         </div>

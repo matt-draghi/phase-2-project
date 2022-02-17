@@ -58,12 +58,15 @@ function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelec
         )
     })
     .sort((itemA, itemB) =>{
-        if(sortBy === "price"){
-            return itemB.price - itemA.price
-        }else{
-            return itemA.name.localeCompare(itemB.name)
-        }
-    })
+      if(sortBy === "price"){
+          return itemB.price - itemA.price
+      }else if(sortBy === "name"){
+          return itemA.name.localeCompare(itemB.name)
+      }
+      else if(sortBy === ""){
+        return itemA.id - itemB.id
+      }
+  })
 
     const displayItem = filterDisplay.map(stroller => {
         const uniqueKey = `${stroller.name}${stroller.id}`
@@ -88,19 +91,16 @@ function Strollers ({setItemType, strollers, itemType, setSelectedItem, setSelec
                 getSearch ={getSearch}
                 getSortBy ={getSortBy}/>
             </div>
-            <div>
+            <div className="basket-container">
                 <Basket 
                  cartItems={cartItems}
                  onAdd={onAdd}
                  onRemove={onRemove}
                 />
             </div>
-            <div>
+            <div className="item-list-card-container">
                 {displayItem}
             </div>   
-            {/* // delete if cart is not working  */}
-           
-            {/* // ^^^^^ delete if cart is not working  */}
         </div>
     )
 }

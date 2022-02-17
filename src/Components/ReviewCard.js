@@ -29,9 +29,14 @@ function ReviewCard({review}){
 
     return(
         <div className="review-card">
-            <p>User: {user}</p>
-            <p>{reviewStars}</p>
-            <p>{comment}</p>
+            <div className="review-card-header">
+                <span style={{float:"left"}}>User: {user}</span>
+                <span style={{float:"right", color:"gold"}}>{reviewStars}</span>
+            </div>
+            <div>
+                <p>{comment}</p>
+            </div>
+            
         </div>
     )
 }

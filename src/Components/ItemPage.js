@@ -116,7 +116,7 @@ function ItemPage({selectedItem,setSelectedItem}){
                     value={comment}
                     placeholder="Please leave any additional comments"
                 />
-                <input type="submit" value="Submit Review"/>
+                <input className="item-card-button" type="submit" value="Submit Review"/>
             </form>
         )
     
@@ -130,7 +130,7 @@ function ItemPage({selectedItem,setSelectedItem}){
             </div>
             <div className="review-container">
                 <h2>Reviews</h2>
-                <button onClick={handleAddReview}>{showForm ? "Cancel Review" : "Add Review"}</button>
+                <button className="item-card-button" onClick={handleAddReview}>{showForm ? "Cancel Review" : "Add Review"}</button>
                 {showForm ? reviewForm : null}
                 {selectedItem?.reviews.map((review)=>{
                     return <ReviewCard key={review.user} review={review}/>
