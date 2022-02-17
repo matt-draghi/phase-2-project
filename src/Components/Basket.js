@@ -32,7 +32,7 @@ export default function Basket({cartItems, onRemove, onAdd}) {
       ))}
 
       {cartItems.length !== 0 && (
-        <>
+        <div className="total-price">
           <hr></hr>
           <div className="row">
             <div className="col-2"> Item Price</div>
@@ -50,7 +50,7 @@ export default function Basket({cartItems, onRemove, onAdd}) {
             <div className="col-2"> Total Price</div>
             <div className="cor-1 text-right">${totalPrice.toFixed(2)}</div>
           </div>
-        </>
+        </div>
       )}
     </aside>
   )

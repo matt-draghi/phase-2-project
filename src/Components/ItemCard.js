@@ -7,21 +7,10 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
   const {name, brand, price, description, image, youtube_link, id, reviews} = item
 
   const [showDetail, setShowDetail]=useState(false)
-  const [reviewInput, setReviewInput] = useState("")
   
   function handleDetail(){
     setShowDetail((showDetail)=>!showDetail)
   }
-
-  function handleReviewInput (event){
-    setReviewInput(event.target.value)
-
-  }
-
-  function handleSubmit(event){
-    event.preventDefault();
-   
-      }
 
   function selectItem(e){
     localStorage.setItem("path", path)
@@ -38,7 +27,6 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
       </div>
       <div className ="item-name">
        
-        {/* Want the below to navigate to that specific item's page */}
         <Link onClick={selectItem} to={path} className="item-page-navigation">{name}</Link>
         <p>by: {brand}</p>
         <p>$ {price}</p>
@@ -48,20 +36,12 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
         <button onClick={handleDetail} className="item-card-button">{showDetail ? "Hide Details" : "Show Details"}</button>
         <p>{showDetail ? description : null}</p>
       </div>
-    
-        <a href={youtube_link} >Watch the Video!</a>
-     
-      <div>
-        <form onSubmit ={handleSubmit}>
-          <label>Reviews </label>
-          <input type="text" onChange={handleReviewInput} value={reviewInput}/>
-          <button className="submit-button">submit</button>
-         </form>
+      <div className="youtubeLink">
+        <a  href={youtube_link} >Watch the Video!</a>
       </div>
-
       {/* // delete if cart is not working  */}
       <div>
-        <button onClick={()=>onAdd(item)}>Add to Cart</button>
+        <button className="add-to-cart-button" onClick={()=>onAdd(item)}>Add to Cart</button>
       </div>
       {/* // delete if cart is not working  */}
 

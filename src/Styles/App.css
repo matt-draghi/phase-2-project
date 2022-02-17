@@ -4,15 +4,20 @@
   font-family: Verdana, Arial, Helvetica, sans-serif;
 
 }
-/* TODO: FIX STYLING */
+
+/* HEADER */
 
 .App-header {
+  position:fixed;
+  top:0;
+  width: 100%;
   background-color: rgb(124, 180, 233);
   height:50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  z-index: 1;
 }
 
 .App-header a{
@@ -26,27 +31,26 @@
   color: #61dafb;
 }
 
-/* .ListItem{
-  display: flex;
-  width:100%;
-  height:250px;
-  margin-left: 100px;
+.content-body{
+  margin-top: 65px;
 }
 
-.ListItem h3.name{
-  margin-top: 50px;
-} */
+/* ITEM CARD */
 
 .item-box{
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  width:300px;
+  /* height:450px; */
   background-repeat: no-repeat;
   background-position: center 90%;
   float: left;
   margin: 2%;
   padding: 2%;
-  border-style: groove;
+  border: groove 2px;
   transition: 0.75s;
   opacity: 1;  
+  box-shadow: 3px 3px 3px 3px;
 }
 
 .item-page-navigation {
@@ -57,6 +61,7 @@
   text-decoration: none;
   color: black;
   font-style: italic;
+  padding: 15px
 }
 
 .item-box a:hover{
@@ -70,7 +75,8 @@
 }
 
 .item-card-button {
-  background-color: rgb(138, 227, 237);
+  background-color: #7CB3E8;
+  color: #ffffff;
   width: 120px;
   height: 30px;
   border-radius: .5em;
@@ -78,14 +84,31 @@
   font-weight: 500;
 }
 
-.stroller-filter{
-  position:absolute;
-  top:0;
-  right:0;
+.youtubeLink{
+  margin-bottom: 10px;
 }
 
-/* // delete if cart not working */
 
+.item-list-card-container{
+  float:left;
+  left: 0;
+  width: 75%;
+}
+/* CART */
+
+.basket-container{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right:5%;
+  border: thick solid;
+  /* padding-left: 3%; */
+  height: auto;
+  width: auto;
+  margin-top: 25px;
+  background-color: rgb(168, 185, 201);
+  opacity: 0.8;
+}
 
 .row{
   display: flex;
@@ -110,14 +133,18 @@ img.small{
   max-height: 8rem;
 }
 /* Add class to this button */
-button{
+button.add-to-cart-button{
   font-size: 0.8rem;
   padding:0.2rem;
   margin: 0.1rem;
+  /* margin-bottom: 20px; */
   border-radius:0.5rem;
   border: 0.1rem #404040 solid;
-  background-color:#f0c040;
-  width:100%;
+  background-color:#6693e6;
+  color: white;
+  width:60%;
+  height: 30px;
+  font-size: 1rem;
   cursor:pointer;
 }
 button.add {
@@ -138,16 +165,27 @@ text-right{
   text-align: right;
 }
 
+.total-price{
+  text-align: left;
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+/* HOME */
+
 .home-buttons {
-  color: black;
+  color: white;
   text-decoration: none;
-  background-color: rgb(138, 227, 237);
+  background-color: rgb(124, 180, 233);
   width: 150px;
   height: 30px;
   border-radius: .8em;
   font-weight: 500;
   margin: auto;
+  
 }
+
+.home-buttons
 
 .submit-button {
   background-color: rgb(138, 227, 237);
@@ -179,18 +217,21 @@ text-right{
 
 .slide-container{
   margin: auto;
-  padding: 60px;
-  max-height: 800px;
+  /* padding-top: 60px; */
+  max-height: 600px;
   max-width: 800px;
-  /* margin-top: 50px;
-  margin-bottom: 50px; */
+  margin-top: 50px;
+  /* margin-bottom: 50px; */
   overflow: hidden;
+  /* border: solid */
 }
 
 .navlink-container{
   display: flex;
   justify-content: space-evenly;
 }
+
+/* ITEM PAGE AND REVIEW CARD */
 
 .item-info-container{
   border-bottom: groove black;
@@ -206,20 +247,34 @@ text-right{
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.3rem;
 }
 
 .review-card{
-  border-top: groove;
-  width: 90%;
-  /* margin-bottom:50px; */
+  border: solid thin;
+  box-shadow: 10px 5px 5px;
+  width: 80%;
   display:flex;
   padding: 50px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+.review-card p{
+  float:left;
+}
+
+.review-card-header{
+  border-bottom: groove 1px;
 }
 
 .review-container button{
   margin-top: 40px;
   margin-bottom: 10px;
 }
+
+/* NEW REVIEW FORM */
 
 .new-review-form{
   width:90%;
@@ -230,11 +285,30 @@ text-right{
   justify-content: space-between;
 }
 
-.new-review-form input[type="text"]{
+.new-review-form input[name="reviewText"]{
   width: 70%;
   height: 100px;
 }
 
 .new-review-form > *{
   margin-bottom: 20px;;
+}
+
+/* FILTER AND SEARCH */
+.filter-search-container{
+  display: flex;
+  margin: 25px;
+  justify-content: space-evenly;
+}
+
+.searchbar-container > input{
+  height: 25px;
+  width: 250px;
+}
+
+.filter-container > select{
+  height: 25px;
+  width: 150px;
+  font-size: 1.1rem;
+  text-align: Left;
 }

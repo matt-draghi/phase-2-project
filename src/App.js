@@ -32,6 +32,7 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
+      <div className="content-body">
       <Switch>
         <Route exact path="/">
             <Home setItemType={setItemType} featuredItems={itemsList}/>
@@ -49,6 +50,7 @@ function App() {
           <ItemPage selectedPath={selectedPath} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>
         </Route>
       </Switch>
+      </div>
     </div>
   );
 }
