@@ -62,6 +62,48 @@
                 ],               
                 "youtube_link":"https://www.youtube.com/watch?v=04L2hWtFDdY",
                 "id":3
+            },
+            {
+                "name":"Muv Exp 2-1 Stroller Wagon PRO",
+                "brand":"Baby Trend",
+                "price":"299.99",
+                "description":"As practical as it is comfortable the Baby Trend Muv Expedition Double Stroller Wagon PRO transforms from a push stroller to a pull wagon Featuring built-in seating for 2, a large canopy, and a mosquito netting to protect from the elements. ** Dimensions (unfolded): : 41 L x 26 W x 18 H ** ** 2-year manufacturer's warranty **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_373609169518595p_imageset?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],               
+                "youtube_link":"https://www.youtube.com/watch?v=HEGwGFkHV7U",
+                "id":4
+            },
+            {
+                "name":"Xari Aluminum Single Stroller Bundle",
+                "brand":"Mima",
+                "price":"1599.99",
+                "description":"Enjoy versatility, innovation, and style with the Mima Xari Aluminum Single Stroller Bundle. This stroller features a carrycot inside system that converts from a stroller to a carrycot, allowing you to comfortably bring your little one anywhere. ** Dimensions (unfolded): : 24 L x 16 W x 35 H ** ** 2-year manufacturer's warranty **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-05-28-20-48_5060535941389_imageset?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],               
+                "youtube_link":"https://www.youtube.com/watch?v=h--4oHRI-CE",
+                "id":5
             }
         ],
 
@@ -128,6 +170,48 @@
                 ],
                 "youtube_link":"https://www.youtube.com/watch?v=FfJVYFt_ctA",
                 "id":3
+            },
+            {
+                "name":"bello Size 1 106-Count",
+                "brand":"Hello Bello ",
+                "price":"39.99",
+                "description":"These hello bello disposable diapers are great for keeping your precious baby dry. Featuring cute prints, these soft diapers are hypoallergenic, made with a plant-derived absorbent core liner, and have a stretchy fit for your baby's comfort. ** Fits babies up to 10 lb ** ** Diaper Duty Wetness Indicator **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/2021-10-06-08-33_hellobello-bbb-clubbox-sharks-wildcats-sz1_imageset?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],
+                "youtube_link":"https://www.youtube.com/watch?v=8R0UH2HQPG0",
+                "id":4
+            },
+            {
+                "name":"Little Snugglers® Size 1 ",
+                "brand":"Huggies Lil snugglers",
+                "price":"49.99",
+                "description":"These hello bello disposable diapers are great for keeping your precious baby dry. Featuring cute prints, these soft diapers are hypoallergenic, made with a plant-derived absorbent core liner, and have a stretchy fit for your baby's comfort. ** Fits babies up to 10 lb ** ** Diaper Duty Wetness Indicator **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-09-03-12-16_huggieslssz196ct49738hires_imageset?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],
+                "youtube_link":"https://www.youtube.com/watch?v=2OyNoCeFqEU",
+                "id":5
             }
         ],
         "formulas":[
@@ -193,6 +277,48 @@
                 ],
                 "youtube_link":"https://www.youtube.com/watch?v=16g0Wrd46IU",
                 "id":3
+            },
+            {
+                "name":"PurAmino™ DHA & ARA Infant Formula ",
+                "brand":"Enfamil",
+                "price":"64.99",
+                "description":"The Enfamil PurAmino DHA & ARA Infant Formula is a hypoallergenic infant formula amino acid-based powder with iron. This formula is for infants and toddlers with severe cow's milk protein and multiple food allergies. ** 21 oz. tub **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/72675245319716p?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],
+                "youtube_link":"https://www.youtube.com/watch?v=uQP5Q2s_70k",
+                "id":4
+            },
+            {
+                "name":"NeuroPro™ 31.40 oz.  Formula ",
+                "brand":"Enfamil",
+                "price":"60.99",
+                "description":"Enfamil NeuroPro Infant Formula is designed with easy-to-digest proteins for babies through 12 months. Fortified with easy-to-digest proteins and dual prebiotics for immune health. ** 21 oz. tub **",
+                "image":"https://b3h2.scene7.com/is/image/BedBathandBeyond/200068820524012p?$690$&wid=690&hei=690",
+                "reviews": [
+                    {
+                        "user": "Luke Skywalker",
+                        "rating": 3,
+                        "comment": "Not too shabby"
+                    },
+                    {
+                        "user": "Ash Ketchum",
+                        "rating": 5,
+                        "comment": "Incredible"
+                    }
+                ],
+                "youtube_link":"https://www.youtube.com/watch?v=jB7YuWbkYJM",
+                "id":5
             }
         ],   
         "home":[
