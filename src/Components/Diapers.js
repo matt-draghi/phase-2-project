@@ -7,7 +7,7 @@ import ItemCard from './ItemCard';
   // ^^^^^ delete if cart is not working 
 
 
-function Diapers ({setItemType, diapers}){
+function Diapers ({setItemType, diapers, setSelectedItem, setSelectedPath, itemType}){
 
     const [search, getSearch] = useState("")
     const [sortBy, getSortBy] = useState("")
