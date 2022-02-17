@@ -9,10 +9,6 @@ function ItemCard({item, itemType, setSelectedItem, setSelectedPath, onAdd}) {
   const [showDetail, setShowDetail]=useState(false)
   const [reviewInput, setReviewInput] = useState("")
   
-  console.log(item)
-
-  
-
   function handleDetail(){
     setShowDetail((showDetail)=>!showDetail)
   }

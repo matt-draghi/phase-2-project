@@ -6,6 +6,7 @@ function ItemPage({selectedItem,setSelectedItem}){
     const [comment, setComment] = useState("")
     const [rating, setRating] = useState()
     const [name, setName] = useState("")
+    const [reviewArray, setReviewArray] = useState([])
 
     useEffect(()=>{
         fetch(`http://localhost:4000${localStorage.getItem("path")}`)
@@ -13,14 +14,14 @@ function ItemPage({selectedItem,setSelectedItem}){
         .then(setItem => {
             setSelectedItem(setItem)
         })
-    },[])
+    },[reviewArray])
 
     const [showForm, setShowForm] = useState(false)
 
     const handleAddReview = () =>{
         setShowForm(!showForm)
     }
-// TODO: Need to make it so rerender occurs - will allow comment to appear after submission
+
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(rating)
@@ -32,6 +33,7 @@ function ItemPage({selectedItem,setSelectedItem}){
         patchReview(newReview)
         setShowForm(!showForm)
         window.alert("Thank you for your review!")
+        setReviewArray([newReview, ...selectedItem.reviews])
     }
 
     const radioSelect = (e) => setRating(e.target.value)

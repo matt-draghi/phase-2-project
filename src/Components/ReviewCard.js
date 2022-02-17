@@ -6,7 +6,7 @@ function ReviewCard({review}){
     const noStar = "☆"
 
     let reviewStars;
-    switch(rating){
+    switch(parseInt(rating)){
         case 5:
             reviewStars = (`${star}${star}${star}${star}${star}`)
             break;
@@ -31,6 +31,7 @@ function ReviewCard({review}){
         <div className="review-card">
             <p>User: {user}</p>
             <p>{reviewStars}</p>
+            <p>{comment}</p>
         </div>
     )
 }

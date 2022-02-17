@@ -8,6 +8,11 @@
       "image": "https://cdn11.bigcommerce.com/s-l97wqz3k9m/images/stencil/608x608/products/97690/188402/1-VISTA21_GRY_GREYSON_0320-VIS-US-GRY__36133.1611954618.jpg?c=1",
       "reviews": [
         {
+          "user": "Jon Snow",
+          "rating": "5",
+          "comment": "King approves"
+        },
+        {
           "user": "Luke Skywalker",
           "rating": 3,
           "comment": "Not too shabby"
