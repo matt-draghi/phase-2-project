@@ -47,7 +47,7 @@ function Home ({setItemType, featuredItems}){
                     </NavLink>
                 
                
-                    <NavLink to="/formula">
+                    <NavLink to="/formulas">
                         <img src={featuredItems[2]?.image} style={{width: "150px"}} alt="formula"/>
                     </NavLink>
 
@@ -57,7 +57,7 @@ function Home ({setItemType, featuredItems}){
                     <NavLink className="home-buttons" to="/diapers">
                         Diapers
                     </NavLink>
-                    <NavLink className="home-buttons" to="/formula">
+                    <NavLink className="home-buttons" to="/formulas">
                         Formula
                     </NavLink>
                 

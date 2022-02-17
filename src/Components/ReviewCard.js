@@ -27,6 +27,10 @@ function ReviewCard({review}){
             break
     }
 
+    
+
+    
+
     return(
         <div className="review-card">
             <p>User: {user}</p>

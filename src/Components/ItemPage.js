@@ -119,13 +119,29 @@ function ItemPage({selectedItem,setSelectedItem}){
                 <input type="submit" value="Submit Review"/>
             </form>
         )
+
+    //add reviews together, divide by length of array or last index of array plus one
+        
     
+    let newRatingsArray = []
+
+    selectedItem?.reviews.map((review) => {
+        newRatingsArray.push(parseInt(review.rating))
+    })
+    
+    let arraySum = newRatingsArray.reduce((a,b) => {
+        return a + b;
+        }, 0)
+
+   let averageRating = (arraySum/newRatingsArray.length).toFixed(2)
+  
 
     return(
         <div className="content-container">
             <div className="item-info-container">
                 <img src={selectedItem?.image} alt={selectedItem?.name}/>
                 <h1>{selectedItem?.name}</h1> <h2>${selectedItem?.price}</h2>
+                <p>Average Rating: {averageRating} / 5</p>
                 <p>{selectedItem?.description}</p>
             </div>
             <div className="review-container">
