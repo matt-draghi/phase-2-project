@@ -15,16 +15,13 @@ function App() {
    const [selectedItem, setSelectedItem] = useState()
    const [selectedPath, setSelectedPath] = useState()
    
-
    useEffect(() => {
        fetch(`http://localhost:4000/${itemType}`)
        .then(resp => resp.json())
        .then(data => {
          setItemsList(data)
        })
-     },[itemType])
-
-
+    },[itemType])
 
 
   return (

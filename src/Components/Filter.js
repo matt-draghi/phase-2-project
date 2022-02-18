@@ -19,10 +19,9 @@ function Filter({search, getSearch, getSortBy}) {
       <div className="filter-container">
       <label>Filter By: </label>
         <select onChange={handleSort}>
-          {/* TODO: set third filter else if for placeholder (And use state) to sort by id (order in json file) */}
-            <option value="">Select Option</option> 
-            <option value="price">Price</option>
-            <option value="name">Name</option>
+          <option value="">Select Option</option> 
+          <option value="price">Price</option>
+          <option value="name">Name</option>
         </select>
       </div>
     </div>

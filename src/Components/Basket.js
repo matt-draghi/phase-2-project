@@ -22,11 +22,7 @@ export default function Basket({cartItems, onRemove, onAdd}) {
               <button onClick={() => onAdd(item)} className="add"> + </button>
           </div>
           <div className="col-2 text-right">
-            
             {item.qty} x {item.price}
-
-          
-            {/* .toFixed(2) */}
           </div>
         </div>
       ))}

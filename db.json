@@ -55,6 +55,11 @@
       "image": "https://b3h2.scene7.com/is/image/BedBathandBeyond/124139961636309p?$690$&wid=690&hei=690",
       "reviews": [
         {
+          "user": "Tyler Taylor",
+          "rating": "0",
+          "comment": "Idk not the best"
+        },
+        {
           "user": "Luke Skywalker",
           "rating": 3,
           "comment": "Not too shabby"
@@ -203,6 +208,11 @@
       "description": "These hello bello disposable diapers are great for keeping your precious baby dry. Featuring cute prints, these soft diapers are hypoallergenic, made with a plant-derived absorbent core liner, and have a stretchy fit for your baby's comfort. ** Fits babies up to 10 lb ** ** Diaper Duty Wetness Indicator **",
       "image": "https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-09-03-12-16_huggieslssz196ct49738hires_imageset?$690$&wid=690&hei=690",
       "reviews": [
+        {
+          "user": "Jon Snow",
+          "rating": "2",
+          "comment": "King in the north dislikes"
+        },
         {
           "user": "Emily D",
           "rating": "4",
